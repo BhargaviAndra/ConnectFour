@@ -6,6 +6,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import static android.graphics.Color.BLACK;
@@ -13,12 +14,15 @@ import static android.graphics.Color.BLACK;
 public class MainActivity extends AppCompatActivity {
 public static int SPLASH_TIME_OUT=4000;
 private ConstraintLayout color;
+private ImageView image;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        color=(ConstraintLayout)findViewById(R.id.color);
-color.setBackgroundColor(BLACK);
+      //  color=(ConstraintLayout)findViewById(R.id.color);
+
+
+//color.setBackgroundColor(BLACK);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
