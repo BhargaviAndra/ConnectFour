@@ -12,7 +12,7 @@ import android.widget.TextView;
 import static android.graphics.Color.BLACK;
 
 public class MainActivity extends AppCompatActivity {
-public static int SPLASH_TIME_OUT=4000;
+public static int SPLASH_TIME_OUT=2000;
 private ConstraintLayout color;
 private ImageView image;
     @Override
@@ -28,6 +28,7 @@ private ImageView image;
             public void run() {
                 Intent i=new Intent(MainActivity.this,HomeActivity.class);
                 startActivity(i);
+                finish();
             }
         },SPLASH_TIME_OUT);
     }
