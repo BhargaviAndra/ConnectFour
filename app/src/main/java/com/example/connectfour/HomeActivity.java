@@ -8,11 +8,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
 public class HomeActivity extends AppCompatActivity {
 private Button startGame;
-private EditText player1;
-private EditText player2;
+private RadioGroup radioGroup;
+private RadioButton red,yellow;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         final int getOrientation = getRequestedOrientation();
@@ -20,19 +25,17 @@ private EditText player2;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         startGame=(Button)findViewById(R.id.startGame);
-        player1=(EditText)findViewById(R.id.player1);
-        player2=(EditText)findViewById(R.id.player2);
+        radioGroup=(RadioGroup)findViewById(R.id.radioGroup);
+        red=(RadioButton)findViewById(R.id.red);
+        yellow=(RadioButton)findViewById(R.id.yellow);
+
+
+
+
         startGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (player1.getText().equals(""))
-                    player1.setText("player1");
-                if (player2.getText().equals(""))
-                    player2.setText("player2");
-                else {
-                   // player1 = (EditText) player1.getText();
-                    //player2 = (EditText) player2.getText();
-                }
+
                 Intent intent = new Intent(HomeActivity.this, gameActivity.class);
                 startActivity(intent);
                 finish();
