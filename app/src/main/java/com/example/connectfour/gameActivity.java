@@ -12,7 +12,6 @@ public class gameActivity extends AppCompatActivity {
         final int getOrientation = getRequestedOrientation();
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
         canvasView canvasView=new canvasView(this);
         setContentView(canvasView);
 
